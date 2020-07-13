@@ -1,24 +1,27 @@
 
-k= 2;
-i=1;
+k = 2;
 m=5000;
 B = 1.414;
 d=1;
-M = m;
+M = m; 
 nu = 2;
 K=2;
-Z=1;
-X=0;
-Y=0;
+Z=2;
+x = 1;
+y = 1;
+n = 1;
+X = x - Z;
+Y = y - n; % n is a metric tensor
 
-r = X^2 + ((Y-m*d)^2)^1/2;
+z = zeta(sym([0.7 i 4 11/3]));
+
+r = (X^2 + (Y-m*d^2))^(1/2);
 
 H = besselh(nu,K,Z);
 
 for m = -M:M
-   G = H*(k*r)*exp(1)^i*m*B*d;
+   G = H*(k*r)*exp(1)^(1i*m*B*d);
 end
 
-U = @(X,Y,M) (-1/4)*G;
+G = (-1/4)*G
 
-fplot(U,[-M M])
