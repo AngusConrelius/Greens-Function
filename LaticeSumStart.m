@@ -29,7 +29,7 @@ for l = 0:L
     Z=k*r;
     JL = besselj(nu,Z);
     Bm = B + m*p
-    theta = sin(1)^(-1) * (Bm/k);
+    theta = sin(1)^(-1) * (Bm/k);% PDF page 11
     Sum1 = Sum1 + EL*SL*JL*cos(l)*(pi/2 - theta)
 end
 
@@ -47,11 +47,11 @@ for l = 0:L
     
     if (l==0)
         
-       Term = Term + ZeroSum(l)
+        Term = Term + ZeroSum(l)
         
     elseif mod(l,2) == 0
         
-       Term = Term + EvenSum(l)
+        Term = Term + EvenSum(l)
         
     else
         
@@ -60,4 +60,4 @@ for l = 0:L
     end
     
 end
-  Term
+Term
