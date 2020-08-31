@@ -4,8 +4,8 @@ m = 7;
 d = 2/20;
 p = 2*pi/d;
 B = sqrt(2)/d;
-c = 0.5772157;
-C = 1.2020569;
+c = 0.5772157; % in PDF on page 11
+C = 1.2020569; % in PDF on page 11
 K = 2;
 k = 20;
 M = m;
@@ -60,4 +60,5 @@ for l = 0:L
     end
     
 end
+
 Term
