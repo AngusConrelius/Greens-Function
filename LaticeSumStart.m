@@ -27,7 +27,7 @@ for l = 0:L
     end
     
     Z=k*r;
-    JL = besselj(nu,Z);
+    JL = besselj(nu,Z); % was not found directly in document but belived to be a bessel j function
     Bm = B + m*p
     theta = sin(1)^(-1) * (Bm/k);% PDF page 11
     Sum1 = Sum1 + EL*SL*JL*cos(l)*(pi/2 - theta)
@@ -41,8 +41,6 @@ Term = -1i/4 * (H + Sum1)
 S0 = 0;
 s2L = 0;
 s3L = 0;
-
-
 for l = 0:L
     
     if (l==0)
